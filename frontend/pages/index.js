@@ -300,12 +300,13 @@ export default function Home() {
 
   if (!isMounted) return null;
 
-  if (!isConnected)
+  if (!isConnected) {
     return (
-      <div>
-        <ConnectButton />
+      <div className={styles.centercontainer}>
+        <ConnectButton className={styles.connectbutton} />
       </div>
     );
+  }
 
   return (
     <div className={inter.className}>
